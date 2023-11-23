@@ -12,4 +12,6 @@ func main() {
 	fmt.Printf("The needle is at index %d\n", algo.Bsearch(29, hs))
 	fmt.Printf("The needle is at index %d\n", algo.Bsearch(1, hs))
 	fmt.Printf("The needle is at index %d\n", algo.Bsearch(54, hs))
+
+	fmt.Printf("The Crystal Ball optimized break is at level: %d\n", algo.TwoCb([]bool{false, false, false, false, false, false, false, false, true, true, true, true}))
 }
