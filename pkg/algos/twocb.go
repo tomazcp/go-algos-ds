@@ -18,6 +18,7 @@ func TwoCb(levels []bool) int {
 	for i := start; i < fb; i++ {
 		if levels[i] {
 			ob = i
+			break
 		}
 	}
 
