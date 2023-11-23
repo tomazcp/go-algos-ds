@@ -1,15 +1,13 @@
 package algos
 
-import "math"
-
 // Bsearch finds n inside the hs and returns its index if found, otherwise -1
 func Bsearch(n int, hs []int) int {
 	lo := 0
 	hi := len(hs)
 	idx := -1
 
-	for lo != hi {
-		mid := int(math.Floor(float64(lo + (hi-lo)/2)))
+	for lo < hi {
+		mid := lo + (hi-lo)/2
 		val := hs[mid]
 		if val == n {
 			idx = mid

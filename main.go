@@ -10,4 +10,6 @@ func main() {
 
 	fmt.Printf("The needle is at index %d\n", algo.Bsearch(5, hs))
 	fmt.Printf("The needle is at index %d\n", algo.Bsearch(29, hs))
+	fmt.Printf("The needle is at index %d\n", algo.Bsearch(1, hs))
+	fmt.Printf("The needle is at index %d\n", algo.Bsearch(54, hs))
 }
