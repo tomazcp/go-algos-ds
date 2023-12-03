@@ -2,25 +2,23 @@ package algos
 
 import "math"
 
-func TwoCb(levels []bool) int {
-	jump := int(math.Sqrt(float64(len(levels))))
+func TwoCb(breaks []bool) int {
 
-	var fb int
-	for i := 0; i < len(levels); i += jump {
-		if levels[i] {
-			fb = i
+	jump := int(math.Sqrt(float64(len(breaks))))
+	i := jump
+	for ; i < len(breaks); i += jump {
+		if breaks[i] {
 			break
 		}
 	}
 
-	start := fb - jump
-	var ob int
-	for i := start; i < fb; i++ {
-		if levels[i] {
-			ob = i
-			break
+	i -= jump
+	for j := 0; j < jump && i < len(breaks); j++ {
+		if breaks[i] {
+			return i
 		}
+		i++
 	}
 
-	return ob
+	return -1
 }
